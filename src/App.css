@@ -1,0 +1,36 @@
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  font-family: 'polished', sans-serif;
+  color: #fff;
+  margin-top: 0px;
+  letter-spacing: 2px;
+  /* font-weight: 600; */
+  
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-optical-sizing: auto;
+  color: #777;
+  font-style: normal;
+  line-height: 24px;
+  background: #000;
+  letter-spacing: 0.3px;
+}
+
+@font-face {
+  font-family: "polished";
+  src: url("/assets/fonts/Anglecia-Pro-Display.otf");
+}
+.text-gold{color:#efdb6d}
+.hover-gold:hover{color:#efdb6d}
+.text-green{color:#63682F}
+.text-yellow{color:#63682F}
+.hover-green:hover{color:#63682F}
+.bg-green{background:#63682F}
+
+.swiper-button-prev, .swiper-button-next {
+color:  #ffcc6e !important}
+
+
+

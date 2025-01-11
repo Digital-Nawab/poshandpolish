@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Posh & Polished Unisex Salon & Academy | Lucknow</title>
+  <meta name="description"
+    content="Welcome to Posh & Polished Unisex Salon & Makeup Academy, where passion meets professionalism! Founded by the visionary Deepak Satya & Tina Satya, our academy is built on the values of family, creativity, and skill development.">
+  <meta name="keywords" content="">
+  <meta name="google-site-verification" content="0cOGnW8Uq5nNcOAy96LYpuzPk99siFb2x4_QF5L9r3Y" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .about-section p {
+      margin-bottom: 15px !important
+    }
+  </style>
+  <script>
+    // Function to fetch data from the API
+    async function fetchSEOData() {
+      const currentURL = window.location.href;
+      
+      const apiUrl = `https://admin.theposhandpolished.com/api/meta-tag/${currentURL}`; // Define API URL
+
+      try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data)
+        // Verify data structure before using it
+        if (data && data.url) {
+          // Update dynamic fields only when URL matches
+          const currentURL = window.location.href;
+          if (currentURL.includes(data.url)) {
+            // Set the title dynamically
+            document.title = data.title || 'Posh & Polished Unisex Salon & Academy | Lucknow';
+
+            // Set meta description dynamically
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+              metaDescription.setAttribute('content', data.description || 'Default description');
+            }
+
+            // Set meta keywords dynamically
+            const metaKeywords = document.querySelector('meta[name="keywords"]');
+            if (metaKeywords) {
+              metaKeywords.setAttribute('content', data.keywords || 'Salon, Services, Academy, Lucknow, Spa, Haircuts');
+            }
+          } else {
+            console.warn('Current URL does not match the data URL.');
+          }
+        }
+      } catch (error) {
+        console.error('Failed to fetch SEO data:', error);
+      }
+    }
+
+    // Call the function to fetch SEO data and update meta tags
+    fetchSEOData();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    console.log(document.getElementsByTagName('*'));
+  </script>
+</body>
+
+</html>
