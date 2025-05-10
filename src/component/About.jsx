@@ -34,11 +34,11 @@ function About() {
     <>
 
       {aboutData.map((item, index) => (
-        <section key={item.id} data-aos="fade-down" className={`bg-[#f7f3e8] text-white about-section py-16 px-4 ${index % 2 === 0 ? 'bg-[#f7f3e8]' : 'bg-[#d6e7f7]'}`}>
+        <section key={item.id} data-aos="fade-down" className={`bg-[#f7f3e8] text-white about-section  lg:lg:py-16 py-6  px-4 ${index % 2 === 0 ? 'bg-[#f7f3e8]' : 'bg-[#d6e7f7]'}`}>
           <div className="container mx-auto">
-            <div className="grid md:grid-cols-2 gap-56 items-center">
+            <div className="grid md:grid-cols-2  lg:gap-56 items-center">
               {/* Image Section */}
-              <div className={index % 2 === 0 ? 'order-last' : ''}>
+              <div className={`${index % 2 === 0 ? 'order-last lg:block hidden' : ''} `}>
                 <img loading="lazy" className='w-full' src={`https://admin.theposhandpolished.com/${item.image}`} alt="Posh & Polished" />
               </div>
 

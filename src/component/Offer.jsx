@@ -28,7 +28,7 @@ const Offer = () => {
 
   return (
     <>
-      <section data-aos="fade-down" className="bg-[#f7f3e8] text-white py-16 px-4">
+      <section data-aos="fade-down" className="bg-[#f7f3e8] text-white lg:py-16 py-6  px-4">
         <div className="container mx-auto">
           <Swiper 
             modules={[Navigation, Pagination, Autoplay]}
@@ -36,7 +36,7 @@ const Offer = () => {
             slidesPerView={1}
             centeredSlides={true}
             centeredSlidesBounds={true}
-            navigation={true}
+            navigation={false}
             loop= {true}
             autoplay={{
               delay: 2500,

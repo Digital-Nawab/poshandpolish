@@ -1,4 +1,3 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Import Swiper styles
 import 'swiper/css/pagination'; // Optional: for pagination styling
@@ -52,7 +51,7 @@ const testimonials = [
 
 const Testimonial = () => {
   return (
-    <section className="bg-gradient-to-r from-[#fff6f6] to-[#e0f2ff] py-16 px-4">
+    <section className="bg-gradient-to-r from-[#fff6f6] to-[#e0f2ff] lg:py-16 py-6  px-4">
       <div className="container mx-auto">
        {/*  <h3 className="text-black text-center font-bold text-sm uppercase mb-2">
           Testimonial
@@ -64,7 +63,7 @@ const Testimonial = () => {
           modules={[Pagination, Navigation, Autoplay]}
           spaceBetween={0}
           slidesPerView={1}
-          navigation
+          
           loop
           /* autoplay={{
             delay: 2500,

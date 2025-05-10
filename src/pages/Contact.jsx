@@ -55,7 +55,7 @@ function Contact() {
   return (
     <Layout>
       <div
-        className="w-full inset-0 bg-cover bg-cover-right bg-black bg-opacity-40 py-16 px-4"
+        className="w-full inset-0 bg-cover bg-cover-right bg-black bg-opacity-40 lg:py-16 py-6  px-4"
         style={{ backgroundImage: "url('/assets/images/contact.webp')" }}
       >
         {/* Header Section */}
